@@ -641,7 +641,7 @@ NL_2013<-NL_2013 %>%
 ##Bind the data together and give the mean mean of unemployment rate across all time points
 NL_EconomicCrisis<-rbind(NL_2006, NL_2007, NL_2008, NL_2009, NL_2010, NL_2011, NL_2012, NL_2013)
 NL_EconomicCrisis<-NL_EconomicCrisis %>% 
-        mutate(MeanUnEmploymentRate=(0.059+0.050+0.042+0.036+0.043+0.050+0.050+0.058)/8)
+        mutate(MeanUnEmploymentRate=mean(UnemploymentRate))
 
 
 
@@ -700,7 +700,7 @@ NO_2013<-NO_2013 %>%
 ##Bind the data together and give the mean mean of unemployment rate across all time points
 NO_EconomicCrisis<-rbind(NO_2006, NO_2008, NO_2009, NO_2010, NO_2012, NO_2012, NO_2013)
 NO_EconomicCrisis<-NO_EconomicCrisis %>% 
-        mutate(MeanUnEmploymentRate=(0.044+0.025+0.025+0.031+0.035+0.032+0.031)/7)
+        mutate(MeanUnEmploymentRate=mean(UnemploymentRate))
 
 
 
@@ -760,7 +760,7 @@ PL_2013<-PL_2013 %>%
 ##Bind the data together and give the mean mean of unemployment rate across all time points
 PL_EconomicCrisis<-rbind(PL_2006, PL_2008, PL_2009, PL_2010, PL_2011, PL_2012, PL_2013)
 PL_EconomicCrisis<-PL_EconomicCrisis %>% 
-        mutate(MeanUnEmploymentRate=(0.178+0.096+0.071+0.082+0.096+0.096+0.101)/7)
+        mutate(MeanUnEmploymentRate=mean(UnemploymentRate))
 
 
 
@@ -823,7 +823,7 @@ PT_2013<-PT_2013 %>%
 ##Bind the data together and give the mean mean of unemployment rate across all time points
 PT_EconomicCrisis<-rbind(PT_2006, PT_2007, PT_2008, PT_2009, PT_2010, PT_2011, PT_2012, PT_2013)
 PT_EconomicCrisis<-PT_EconomicCrisis %>% 
-        mutate(MeanUnEmploymentRate=(0.076+0.077+0.080+0.075+0.094+0.108+0.127+0.155)/8)
+        mutate(MeanUnEmploymentRate=mean(UnemploymentRate))
 
 
 
@@ -882,7 +882,7 @@ RU_2012<-RU_2012 %>%
 ##Bind the data together and give the mean mean of unemployment rate across all time points
 RU_EconomicCrisis<-rbind(RU_2006, RU_2007, RU_2008, RU_2009, RU_2010, RU_2011, RU_2012)
 RU_EconomicCrisis<-RU_EconomicCrisis %>% 
-        mutate(MeanUnEmploymentRate=(0.071+0.071+0.060+0.062+0.083+0.074+0.065)/7)
+        mutate(MeanUnEmploymentRate=mean(UnemploymentRate))
 
 
 
@@ -946,7 +946,7 @@ SK_2013<-SK_2013 %>%
 ##Bind the data together and give the mean mean of unemployment rate across all time points
 SK_EconomicCrisis<-rbind(SK_2006, SK_2007, SK_2008, SK_2009, SK_2010, SK_2011, SK_2012, SK_2013)
 SK_EconomicCrisis<-SK_EconomicCrisis %>% 
-        mutate(MeanUnEmploymentRate=(0.163+0.134+0.111+0.095+0.120+0.144+0.136+0.140)/8)
+        mutate(MeanUnEmploymentRate=mean(UnemploymentRate))
 
 
 
@@ -997,7 +997,7 @@ SI_2012<-SI_2012 %>%
 ##Bind the data together and give the mean mean of unemployment rate across all time points
 SI_EconomicCrisis<-rbind(SI_2006, SI_2008, SI_2010, SI_2011, SI_2012)
 SI_EconomicCrisis<-SI_EconomicCrisis %>% 
-        mutate(MeanUnEmploymentRate=(0.065+0.048+0.059+0.072+0.082)/5)
+        mutate(MeanUnEmploymentRate=mean(UnemploymentRate))
 
 
 
@@ -1052,7 +1052,7 @@ ES_2013<-ES_2013 %>%
 ##Bind the data together and give the mean mean of unemployment rate across all time points
 ES_EconomicCrisis<-rbind(ES_2006, ES_2007, ES_2008, ES_2009, ES_2011, ES_2013)
 ES_EconomicCrisis<-ES_EconomicCrisis %>% 
-        mutate(MeanUnEmploymentRate=(0.092+0.084+0.082+0.113+0.199+0.248)/6)
+        mutate(MeanUnEmploymentRate=mean(UnemploymentRate))
 
 
 
@@ -1113,7 +1113,7 @@ SE_2013<-SE_2013 %>%
 ##Bind the data together and give the mean mean of unemployment rate across all time points
 SE_EconomicCrisis<-rbind(SE_2006, SE_2007, SE_2008, SE_2009, SE_2010, SE_2011, SE_2012, SE_2013)
 SE_EconomicCrisis<-SE_EconomicCrisis %>% 
-        mutate(MeanUnEmploymentRate=(0.075+0.071+0.062+0.062+0.083+0.086+0.078+0.080)/8)
+        mutate(MeanUnEmploymentRate=mean(UnemploymentRate))
 
 
 
@@ -1175,7 +1175,7 @@ CH_2013<-CH_2013 %>%
 ##Bind the data together and give the mean mean of unemployment rate across all time points
 CH_EconomicCrisis<-rbind(CH_2006, CH_2007, CH_2008, CH_2009, CH_2010, CH_2011, CH_2012, CH_2013)
 CH_EconomicCrisis<-CH_EconomicCrisis %>% 
-        mutate(MeanUnEmploymentRate=(0.044+0.040+0.036+0.034+0.041+0.048+0.044+0.045)/8)
+        mutate(MeanUnEmploymentRate=mean(UnemploymentRate))
 
 
 
@@ -1226,7 +1226,7 @@ UA_2013<-UA_2013 %>%
 ##Bind the data together and give the mean mean of unemployment rate across all time points
 UA_EconomicCrisis<-rbind(UA_2006, UA_2007, UA_2009, UA_2011, UA_2013)
 UA_EconomicCrisis<-UA_EconomicCrisis %>% 
-        mutate(MeanUnEmploymentRate=(0.072+0.068+0.064+0.081+0.075)/5)
+        mutate(MeanUnEmploymentRate=mean(UnemploymentRate))
 
 
 
@@ -1289,4 +1289,4 @@ GB_2013<-GB_2013 %>%
 ##Bind the data together and give the mean mean of unemployment rate across all time points
 GB_EconomicCrisis<-rbind(GB_2006, GB_2007, GB_2008, GB_2009, GB_2010, GB_2011, GB_2012, GB_2013)
 GB_EconomicCrisis<-GB_EconomicCrisis %>% 
-        mutate(MeanUnEmploymentRate=(0.048+0.053+0.053+0.056+0.075+0.078+0.080+0.079)/8)
+        mutate(MeanUnEmploymentRate=mean(UnemploymentRate))
