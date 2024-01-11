@@ -294,6 +294,7 @@ MakeDummy_2008<-function(data, NumVarName){
 AllCountry_EconomicCrisis$Time2008<-MakeDummy_2008(data = AllCountry_EconomicCrisis,
                                               NumVarName = "inwyys")
 
+
 #Dummy of 2010:
 MakeDummy_2010<-function(data, NumVarName){
         output<-as.numeric()
@@ -314,10 +315,20 @@ AllCountry_EconomicCrisis$Time2010<-MakeDummy_2010(data = AllCountry_EconomicCri
 
 ####----------------------------------------------------------------------------------------------------------
 ##Change the colname of MeanUnemploymentRate to Unemploy_CrossSec
-colnames(AllCountry_EconomicCrisis)[17]<-"Unemploy_CrossSec"
+colnames(AllCountry_EconomicCrisis)[18]<-"Unemploy_CrossSec"
 
 
 ####----------------------------------------------------------------------------------------------------------
 ##Make the longitudinal term of Unemployment rate after subtracting the mean unemployment:
 AllCountry_EconomicCrisis<-AllCountry_EconomicCrisis %>%
         mutate(Unemploy_Longi=UnemploymentRate-Unemploy_CrossSec)
+
+####----------------------------------------------------------------------------------------------------------
+##Change the colname of MeanGDPGrowth to GDPGrowth_CrossSec
+colnames(AllCountry_EconomicCrisis)[19]<-"GDPGrowth_CrossSec"
+
+
+####----------------------------------------------------------------------------------------------------------
+##Make the longitudinal term of GDP growth per capita after subtracting the mean of GDP growth per capita:
+AllCountry_EconomicCrisis<-AllCountry_EconomicCrisis %>%
+        mutate(GDPGrowth_Longi=GDPGrowth-GDPGrowth_CrossSec)
